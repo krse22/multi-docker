@@ -17,7 +17,7 @@ after_success:
   # - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password--stdin
   docker login -u "$DOCKER_ID" -p "$DOCKER_PASSWORD"
   # Take those images and push them to docker hub
-  # Extra comment 3
+  # Extra comment what is going on??
   - docker push krse22/multi-client
   - docker push krse22/multi-nginx
   - docker push krse22/multi-server

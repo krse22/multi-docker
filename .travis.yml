@@ -9,14 +9,14 @@ script:
   - docker run -e CI=true krsevan/react-test npm test
 
 after_success:
-  - docker build -t krsevan/multi-client ./client
-  - docker build -t krsevan/multi-nginx ./nginx
-  - docker build -t krsevan/multi-server ./server
-  - docker build -t krsevan/multi-worker ./worker
+  - docker build -t krse22/multi-client ./client
+  - docker build -t krse22/multi-nginx ./nginx
+  - docker build -t krse22/multi-server ./server
+  - docker build -t krse22/multi-worker ./worker
   # Log in to the docker CLI
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password--stdin
   # Take those images and push them to docker hub
-  - docker push krsevan/multi-client
-  - docker push krsevan/multi-nginx
-  - docker push krsevan/multi-server
-  - docker push krsevan/multi-worker
+  - docker push krse22/multi-client
+  - docker push krse22/multi-nginx
+  - docker push krse22/multi-server
+  - docker push krse22/multi-worker
